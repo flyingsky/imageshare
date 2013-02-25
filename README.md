@@ -9,10 +9,13 @@ Most image hosting site provides space to store image/vedio. Why we don't use it
 
 Now it plans to support below image sharing site:
 
-1. [PhotoBucket](http://photobucket.com)
-2. [Dropbox](http://dropbox.com) (Do we need support this? Now public folder is removed, we cannot use the public url)
+1. [PhotoBucket](http://photobucket.com) (TODO)
+2. [Dropbox](http://dropbox.com)
 
-### How
+### How to use it
+1. Create your app in dropbox from [here](https://www.dropbox.com/developers/apps). Copy your app_key and app_secret to override my key in lib/token/index.js.
+2. Click [here](https://www.dropbox.com/enable_public_folder) to Enable dropbox public folder. You also can find more detail from [here](https://www.dropbox.com/help/16/en).
+2. Remove lib/token/token.json, rename lib/token/token_empty.json to lib/token.json.
+3. Enter this project directory, and run `npm install` to install all dependencies.
+4. Access [http://localhost:3000](http://localhost:3000), you will be asked to authrize access your dropbox app.
 
-1. General API to get all images/folder information
-2. Abstract provider to adapter different image hosting API
