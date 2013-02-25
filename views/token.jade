@@ -1,0 +1,14 @@
+form(action='/token', method='post')
+  p
+    if !provider
+        input(type='radio', name='provider', value='dropbox', checked='true')
+        label DropBox
+
+        input(type='radio', name='provider', value='photobucket')
+        label PhotoBucket
+    else
+      label= provider
+
+  input(type='hidden', name='step', value=step)
+
+  input(type='submit', value=submitText, style='text-transform:capitalize')
